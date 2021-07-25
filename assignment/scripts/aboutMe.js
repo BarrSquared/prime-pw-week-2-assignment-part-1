@@ -21,7 +21,7 @@ let pets = 1;
 // 9 - Create a variable called `pets` and set it to the value of the number of pets you have
 let friendsPets = 2;
 // 10 - Create a variable called `friendsPets` and assign it the value of the number of pets your friend has
-pets = 3;
+pets +=2;
 // 11 - Add two pets to your `pets` variable
 const allowedPets = 3;
 // 12 - Create a constant variable called `allowedPets` and set it to a number value of your choice
@@ -52,13 +52,28 @@ if (pets < allowedPets) {
 // if the value of `pets` is greater than the value of `allowedPets`.
 
 // STRETCH GOALS:
+let mostPets = 0;
 
+if (pets > friendsPets) {
+  mostPets = pets;
+} else {
+  mostPets = friendsPets;
+}
+console.log(mostPets);
 // 16 - Make a variable called `mostPets` and a conditional that
 // correctly checks the `pets` and `friendsPets` variables, and
 // assigns the highest value to `mostPets`. There's several possibilities --
 // be sure to think through all the scenarios.
 // console.log `mostPets` after the conditional has run.
-
+switch(pets > friendsPets) {
+  case true:
+    mostPets = pets;
+  break;
+  case false:
+    mostPets = friendsPets;
+  break;
+}
+console.log(mostPets);
 // 17 - Rewrite question 16 with a `switch` statement. You'll need to do research!
-
+console.log((pets > friendsPets) ? mostPets = pets : mostPets = friendsPets);
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
